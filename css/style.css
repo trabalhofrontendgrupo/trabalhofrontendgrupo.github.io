@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;  /* Cor de fundo mais neutra */
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e88e5;  /* Azul claro para representar tranquilidade */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegação */
+nav {
+    background-color: #1976d2;  /* Tom de azul mais intenso */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;  /* Amarelo suave ao passar o mouse */
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+}
+
+/* Títulos */
+h2 {
+    color: #1e88e5;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1e88e5;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Texto */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e88e5;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Redes sociais no rodapé */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffeb3b; /* Cor amarela suave ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle i {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1976d2;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
